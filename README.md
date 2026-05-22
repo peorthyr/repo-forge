@@ -1,21 +1,15 @@
 # Repo Forge
 
-Repo Forge is a skill suite for creating, analyzing, and maintaining architecture and governance artifacts in agent-ready repositories.
+Coding agents lose context between sessions. Repo Forge fixes that by building and maintaining the structural files that let agents stay oriented — architecture notes, decision logs, planning docs, request routing — without touching a single line of app code.
 
-It does not generate application code. It focuses on repository structure, planning assets, and decision/governance documents that help coding agents work safely and consistently.
-
-## Why
-
-Coding agents work better when repositories expose stable architecture, planning, backlog, decision, and request-routing files.
-
-Repo Forge helps create and maintain those files without turning the skill suite into an application-code generator.
+If your repo is vague, your agent will guess. Repo Forge makes sure it doesn't have to.
 
 ## Skills
 
-- [ai-project-seed](skills/ai-project-seed/SKILL.md): create an initial architecture/governance package for a new or unstructured repo.
-- [ai-project-scan](skills/ai-project-scan/SKILL.md): assess an existing repository and report coverage, gaps, and improvement opportunities.
-- [ai-project-keeper](skills/ai-project-keeper/SKILL.md): maintain and realign existing architecture/governance files over time.
-- [intake](skills/intake/SKILL.md): classify incoming requests before implementation so work is routed and scoped correctly.
+- **[ai-project-seed](skills/ai-project-seed/SKILL.md)** — Start from scratch. Bootstraps a complete set of architecture and planning files for a new or unstructured repo, so agents have something solid to work with from day one.
+- **[ai-project-scan](skills/ai-project-scan/SKILL.md)** — See what's there. Audits an existing repo and reports what context agents currently have, what's missing, and what's worth improving.
+- **[ai-project-keeper](skills/ai-project-keeper/SKILL.md)** — Stay current. Detects drift between your architecture files and the actual state of the project, and suggests corrections before agents start working from outdated assumptions.
+- **[intake](skills/intake/SKILL.md)** — Route before you build. Classifies a raw request, scopes it, and routes it to the right skill before it becomes unplanned implementation work.
 
 ## Install
 
@@ -37,20 +31,20 @@ List available skills:
 npx skills add peorthyr/repo-forge --list
 ```
 
-## Scope
+## What it manages
 
-Repo Forge skills are for architecture/governance artifacts such as:
+Repo Forge works on the structural files that agents read for context — not your application code:
 
-- AGENTS.md
-- BACKLOG.md
-- PLANS.md
-- CHANGELOG.md
-- docs/ARCHITECTURE.md
-- docs/REQUEST-INTAKE.md
-- plans/
-- adr/
+| File | What it's for |
+|------|--------------|
+| `AGENTS.md` | Instructions for agents working in this repo |
+| `docs/ARCHITECTURE.md` | System overview and key design decisions |
+| `BACKLOG.md` / `PLANS.md` | What's planned and why |
+| `CHANGELOG.md` | What has changed |
+| `docs/REQUEST-INTAKE.md` | How to route and scope new requests |
+| `plans/`, `adr/` | Detailed plans and architecture decision records |
 
-They are intended for repositories worked on with agent tooling such as GitHub Copilot, Codex, Claude Code, Cursor, and compatible tools.
+Works with GitHub Copilot, Claude Code, Cursor, Codex, and other agent tooling.
 
 ## Repository Layout
 

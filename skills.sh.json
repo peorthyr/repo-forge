@@ -4,7 +4,7 @@
   "groupings": [
     {
       "title": "Repo Forge",
-      "description": "Repo Forge skills for scanning, seeding, maintaining, and routing architecture/governance work in agent-ready repositories.",
+      "description": "Keep your repo's architecture, planning, and decision files accurate and agent-readable — without touching app code.",
       "skills": [
         "ai-project-scan",
         "ai-project-seed",
