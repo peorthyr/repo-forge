@@ -55,3 +55,5 @@ skills/
   ai-project-keeper/
   intake/
 ```
+
+[![skills.sh](https://skills.sh/b/peorthyr/repo-forge)](https://skills.sh/b/peorthyr/repo-forge)
