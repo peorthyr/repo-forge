@@ -3,8 +3,8 @@
   "notGrouped": "bottom",
   "groupings": [
     {
-      "title": "Agentic Project Governance",
-      "description": "Skills for scanning, seeding, maintaining, and routing architecture/governance work in agent-ready repositories.",
+      "title": "Repo Forge",
+      "description": "Repo Forge skills for scanning, seeding, maintaining, and routing architecture/governance work in agent-ready repositories.",
       "skills": [
         "ai-project-scan",
         "ai-project-seed",
