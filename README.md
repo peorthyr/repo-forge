@@ -4,6 +4,12 @@ Repo Forge is a skill suite for creating, analyzing, and maintaining architectur
 
 It does not generate application code. It focuses on repository structure, planning assets, and decision/governance documents that help coding agents work safely and consistently.
 
+## Why
+
+Coding agents work better when repositories expose stable architecture, planning, backlog, decision, and request-routing files.
+
+Repo Forge helps create and maintain those files without turning the skill suite into an application-code generator.
+
 ## Skills
 
 - [ai-project-seed](skills/ai-project-seed/SKILL.md): create an initial architecture/governance package for a new or unstructured repo.
