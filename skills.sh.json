@@ -1,0 +1,16 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Agentic Project Governance",
+      "description": "Skills for scanning, seeding, maintaining, and routing architecture/governance work in agent-ready repositories.",
+      "skills": [
+        "ai-project-scan",
+        "ai-project-seed",
+        "ai-project-keeper",
+        "intake"
+      ]
+    }
+  ]
+}

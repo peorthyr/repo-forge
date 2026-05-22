@@ -1,0 +1,26 @@
+{
+  "skill_name": "ai-project-keeper",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review an existing architecture package where AGENTS and ARCHITECTURE docs drifted from current workflow, and realign them.",
+      "expected_output": "Consistent governance docs with explicit impact notes and tracked follow-ups.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "prompt": "Clean a workbench project containing duplicated legacy instructions and stale plan references.",
+      "expected_output": "Duplicates reduced, canonical references restored, and unresolved debt captured in backlog.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "prompt": "Update a maintenance workspace after scope change and ensure changelog entries reflect only executed work.",
+      "expected_output": "Focused updates with valid changelog discipline and explicit residual tasks.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}

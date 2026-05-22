@@ -1,0 +1,26 @@
+{
+  "skill_name": "ai-project-seed",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a new architecture seed for inventory-sync with canonical governance files and clear TODO placeholders.",
+      "expected_output": "A coherent template package in output/ with required canonical files.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "prompt": "Bootstrap a seed for a WordPress automation project with AGENTS, backlog, architecture doc, and ADR template.",
+      "expected_output": "Complete skeleton with pragmatic operational language and no missing canonical assets.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "prompt": "Generate a reusable seed that explicitly documents impact checks and plan workflows for multi-step tasks.",
+      "expected_output": "Seed includes impact and planning conventions, plus verifiable TODO sections.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}

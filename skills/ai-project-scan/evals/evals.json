@@ -1,0 +1,26 @@
+{
+  "skill_name": "ai-project-scan",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Scan a partially structured repository and decide whether keeper normalization is required before any new template generation.",
+      "expected_output": "Inventory and recommendation for keeper with rationale.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "prompt": "Analyze a legacy repo where architecture notes are mixed in README and propose canonical migration paths.",
+      "expected_output": "Report that preserves information while recommending canonical split into AGENTS/BACKLOG/PLANS/etc.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "prompt": "Inspect a clean architecture workspace and verify whether no structural refactor is needed.",
+      "expected_output": "Conservative report recommending no major refactor and listing minor improvements only.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}

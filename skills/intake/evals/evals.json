@@ -1,0 +1,26 @@
+{
+  "skill_name": "intake",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/intake voglio aggiungere una piccola modifica locale a una pagina statica, senza toccare architettura o dati",
+      "expected_output": "Classificazione do-now con motivazione breve.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "prompt": "/intake secondo me dobbiamo cambiare il modo in cui gestiamo i piani e le decisioni del progetto",
+      "expected_output": "Classificazione adr-candidate o plan con motivazione architetturale.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "prompt": "/intake mi e venuta un'idea interessante ma non so se e prioritaria e forse serve pensarci prima",
+      "expected_output": "Classificazione idea o brainstorm o defer, non implementazione immediata.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}
