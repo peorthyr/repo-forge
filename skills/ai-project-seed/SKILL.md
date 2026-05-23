@@ -1,6 +1,6 @@
 ---
 name: ai-project-seed
-description: 'Create a new agent-first project seed with governance files, decision scaffolding, and evaluation workflow. Use this whenever the user asks to bootstrap a new project structure, generate canonical AGENTS/BACKLOG/PLANS/ARCHITECTURE/ADR assets, make a portable template, or iterate the seed quality through test prompts.'
+description: 'Bootstrap a new repo with everything an AI agent needs to work effectively from day one — AGENTS.md, BACKLOG, PLANS, ARCHITECTURE, ADR scaffolding, and an optional intake pattern. Without these files, agents start blind and guess your intent. Use this when starting a new project or when the repo has no governance structure yet. Trigger on: "bootstrap a new project", "create a project seed with AGENTS and backlog", "generate a reusable architecture template", "set up a portable architecture skeleton".'
 argument-hint: 'target=<slug>, context=<short description>, output=<template destination>'
 ---
 
@@ -19,11 +19,13 @@ argument-hint: 'target=<slug>, context=<short description>, output=<template des
 10. Quick Invocation
 
 ## Purpose
-Create a new project architecture seed ready for agent coding workflows, with repeatable governance and quality checks.
+Starting a new project without the right context files is the fastest way to make your AI agent useless. It won't know your architecture, your conventions, your decisions, or your priorities — so it guesses.
+
+This skill builds the structural layer every agent-first project needs: a coherent set of governance documents that tell agents what the project is, how it's organized, what's been decided, and what's planned. One well-structured seed session means every future agent session starts with context instead of confusion.
 
 Primary outcome:
 - a coherent and reusable project structure
-- canonical governance documents
+- canonical governance documents (AGENTS, BACKLOG, PLANS, ARCHITECTURE, ADR)
 - explicit decision and planning scaffolding
 - evaluation-ready assets for iterative improvement
 - optional intake pattern for classifying raw requests before execution

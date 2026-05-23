@@ -4,7 +4,7 @@
   "groupings": [
     {
       "title": "Repo Forge",
-      "description": "Keep your repo's architecture, planning, and decision files accurate and agent-readable — without touching app code.",
+      "description": "AI coding agents lose context between sessions. They re-discover your codebase from scratch, make wrong assumptions, and produce work that drifts from your intent. Repo Forge fixes this by building and maintaining the structural files agents need to stay oriented — architecture notes, decision logs, planning docs, and request routing — so every session starts informed, not guessing.",
       "skills": [
         "ai-project-scan",
         "ai-project-seed",

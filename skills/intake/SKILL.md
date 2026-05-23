@@ -1,13 +1,15 @@
 ---
 name: intake
-description: 'Classify a raw project request before turning it into work. Use this whenever the user says things like make this change, add this idea, we should also do X, or proposes something whose priority, scope, or destination is not yet clear. Route the request to do-now, plan, backlog, idea, brainstorming, ADR candidate, analysis-first, defer, or reject.'
+description: 'Classify a new request before it becomes unplanned work. Without a triage step, every idea turns into immediate implementation — the agent starts building before the scope is clear, the priority is set, or the impact is understood. Intake stops this: it reads the request, judges its scope and urgency, and routes it to the right destination (do-now, plan, backlog, idea, ADR candidate, analysis-first, defer, or reject). Use this whenever a request is ambiguous, potentially structural, or simply not yet scoped. Trigger on: "I want to add this feature", "I had an idea", "we should also do X", "should we change this convention".'
 argument-hint: 'request=<raw request text>'
 ---
 
 # Intake
 
 ## Purpose
-Classify a raw request before it becomes action.
+Every project accumulates unplanned work the same way: someone says "we should also do X" and the agent starts immediately, before anyone has checked whether X conflicts with an open plan, depends on a decision not yet made, or is simply lower priority than the three things already in progress.
+
+Intake stops that loop. It reads the raw request, judges scope and urgency, and routes it to the right place — so the right work happens at the right time, with the right context, instead of everything becoming immediate implementation.
 
 This skill is conversational and lightweight.
 It does not modify files by default.

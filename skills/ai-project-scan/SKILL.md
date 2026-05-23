@@ -1,13 +1,17 @@
 ---
 name: ai-project-scan
-description: 'Scan and assess architecture/governance assets in a repository before migration work. Use this for existing or partially structured projects to identify architectural files, detect drift, compare patterns with canonical templates, and decide whether to run ai-project-keeper, ai-project-seed, or no structural refactor.'
+description: 'Audit an existing repo and produce a clear picture of what architecture context agents currently have, what is missing, and what is worth fixing. Agents working in unaudited repos waste tokens re-discovering structure and often produce inconsistent or poorly-scoped work. Run this before any architecture cleanup or bootstrap. Trigger on: "scan this repo and tell me what architecture files are usable", "audit governance docs before cleanup", "compare current structure with your standard and propose action", or any time you need to understand the current state before acting.'
 argument-hint: 'target=<project-slug|repo-path>, scope=<repo|workbench>, mode=<quick|full>'
 ---
 
 # AI Project Scan
 
 ## Purpose
-Analyze a repository architecture state and produce a decision report before structural changes.
+Before changing anything in a repo's architecture, you need to know what you actually have.
+
+Many repos have governance files — READMEs, plans, decision notes — but they are incomplete, outdated, duplicated, or not aligned with each other. Agents working with inconsistent context produce inconsistent work. This skill audits the current state, classifies every architecture asset, and tells you exactly what to keep, what to fix, and which Repo Forge skill to run next.
+
+The scan is read-only. No files are changed. The output is an actionable decision report.
 
 Primary outcome:
 - inventory of architecture/governance files
