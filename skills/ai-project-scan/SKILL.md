@@ -1,10 +1,18 @@
 ---
 name: ai-project-scan
-description: 'Audit an existing repo and produce a clear picture of what architecture context agents currently have, what is missing, and what is worth fixing. Agents working in unaudited repos waste tokens re-discovering structure and often produce inconsistent or poorly-scoped work. Run this before any architecture cleanup or bootstrap. Trigger on: "scan this repo and tell me what architecture files are usable", "audit governance docs before cleanup", "compare current structure with your standard and propose action", or any time you need to understand the current state before acting.'
+description: >
+  Audit an existing repo and produce a clear picture of what architecture context agents currently
+  have, what is missing, and what is worth fixing. Agents working in unaudited repos waste tokens
+  re-discovering structure and often produce inconsistent or poorly-scoped work. Run this before any
+  architecture cleanup or bootstrap. Trigger on: "scan this repo and tell me what architecture files
+  are usable", "audit governance docs before cleanup", "compare current structure with your standard
+  and propose action", or any time you need to understand the current state before acting.
 argument-hint: 'target=<project-slug|repo-path>, scope=<repo|workbench>, mode=<quick|full>'
 ---
 
 # AI Project Scan
+
+Scan an existing repo's governance and architecture files. Produce a read-only decision report: what agents currently have, what's missing or stale, and which Repo Forge skill to run next.
 
 ## Purpose
 Before changing anything in a repo's architecture, you need to know what you actually have.
@@ -19,6 +27,8 @@ Primary outcome:
 - recommendation: keep, normalize with keeper, or bootstrap with seed
 - optional pattern-assimilation candidates
 - intake-pattern assessment when raw request routing is present or missing
+
+**The cardinal rule:** This is a read-only audit. Never modify any file during a scan — the report's value comes from seeing the repo exactly as agents will see it.
 
 This skill is read-first and architecture-only.
 It must not edit application code.
@@ -131,6 +141,12 @@ Return:
 - compatibility assessment
 - recommended next skill and rationale
 - pattern candidates found (if any)
+
+## Anti-patterns
+- **Modifying files during the scan** — the scan is read-only. Any file change belongs in keeper or seed, not here.
+- **Recommending seed when keeper is enough** — seed overwrites context; keeper normalizes. Only recommend seed when the repo has no usable governance structure.
+- **Skipping intake assessment** — always check whether an intake pattern exists, even in a quick scan.
+- **Treating legacy files as obsolete by default** — usable-legacy files carry real decisions. Classify before discarding.
 
 ## Quick Invocation
 /ai-project-scan target=my-repo scope=repo mode=full
