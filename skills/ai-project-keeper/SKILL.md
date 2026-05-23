@@ -1,10 +1,19 @@
 ---
 name: ai-project-keeper
-description: 'Review, update, and clean an existing agent-coding repository structure with an iterative evaluation loop. Use this whenever the user asks to realign AGENTS/PLANS/BACKLOG/ARCHITECTURE/ADR files, remove governance drift, clean legacy inconsistencies, maintain architecture quality over time, or continuously improve maintenance discipline.'
+description: >
+  Keep your repo architecture files accurate and aligned as the project evolves. Governance drift
+  is the silent killer of agent-first workflows — AGENTS.md describes a structure that no longer
+  exists, plans reference decisions that changed, backlog has orphaned items. Keeper detects this
+  drift and corrects it. Use on any existing repo that has architecture files but they have fallen
+  out of sync. Trigger on: "review and clean this architecture workspace", "update AGENTS and plans
+  after scope change", "remove drift between architecture docs and backlog", "add intake rules so
+  ideas stop becoming immediate implementation work".
 argument-hint: 'target=<project-slug>, goal=<review|update|cleanup>, scope=<workbench|repo>'
 ---
 
 # AI Project Keeper
+
+Detect and correct drift between governance files and the actual state of the project. Migrate, normalize, and align — never drop existing architectural information.
 
 ## Table of Contents
 1. Purpose
@@ -19,14 +28,20 @@ argument-hint: 'target=<project-slug>, goal=<review|update|cleanup>, scope=<work
 10. Quick Invocation
 
 ## Purpose
-Maintain and improve an existing architecture package for agent-driven projects.
+Architecture files go stale. A plan written three months ago might reference modules that no longer exist. An AGENTS.md might describe conventions the team quietly abandoned. A backlog might list items that were completed but never struck off.
+
+When agents read stale context, they produce stale work — they follow outdated conventions, re-implement decisions already made, or miss the current priorities entirely.
+
+Keeper detects this drift and corrects it: aligning governance files with the actual state of the project, cleaning stale guidance, relocating decisions to their canonical homes, and ensuring agents always have an accurate picture to work from.
 
 Primary outcome:
 - reduced documentation drift
-- aligned governance files
+- aligned governance files (AGENTS, BACKLOG, PLANS, ARCHITECTURE, ADR)
 - explicit residual debt tracking
 - measurable maintenance quality over iterations
 - optional intake pattern added or realigned when request triage is missing or inconsistent
+
+**The cardinal rule:** Never discard existing architectural information. Always migrate decisions to their canonical destination — silently dropping context is worse than leaving it in the wrong place.
 
 This skill never edits application code.
 It only edits architecture/governance assets.
@@ -183,6 +198,12 @@ Return:
 - files updated and cleanup actions
 - validation result
 - residual debt and follow-ups
+
+## Anti-patterns
+- **Discarding architectural decisions without relocating them** — stale does not mean worthless. Migrate to the canonical destination; never delete without an explicit decision.
+- **Running keeper on a repo with no governance structure** — if no governance files exist, use `ai-project-seed` instead.
+- **Creating a second intake system** — if an intake pattern already exists, normalize it; never add a parallel one.
+- **Touching application code** — keeper works on architecture and governance assets only.
 
 ## Quick Invocation
 /ai-project-keeper target=legacy-repo goal=cleanup scope=workbench

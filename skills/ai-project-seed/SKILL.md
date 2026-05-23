@@ -1,10 +1,18 @@
 ---
 name: ai-project-seed
-description: 'Create a new agent-first project seed with governance files, decision scaffolding, and evaluation workflow. Use this whenever the user asks to bootstrap a new project structure, generate canonical AGENTS/BACKLOG/PLANS/ARCHITECTURE/ADR assets, make a portable template, or iterate the seed quality through test prompts.'
+description: >
+  Bootstrap a new repo with everything an AI agent needs to work effectively from day one —
+  AGENTS.md, BACKLOG, PLANS, ARCHITECTURE, ADR scaffolding, and an optional intake pattern.
+  Without these files, agents start blind and guess your intent. Use this when starting a new
+  project or when the repo has no governance structure yet. Trigger on: "bootstrap a new project",
+  "create a project seed with AGENTS and backlog", "generate a reusable architecture template",
+  "set up a portable architecture skeleton".
 argument-hint: 'target=<slug>, context=<short description>, output=<template destination>'
 ---
 
 # AI Project Seed
+
+Bootstrap a complete governance layer for a new, empty project. Create all required architecture files so every future agent session starts with context instead of guessing.
 
 ## Table of Contents
 1. Purpose
@@ -19,14 +27,18 @@ argument-hint: 'target=<slug>, context=<short description>, output=<template des
 10. Quick Invocation
 
 ## Purpose
-Create a new project architecture seed ready for agent coding workflows, with repeatable governance and quality checks.
+Starting a new project without the right context files is the fastest way to make your AI agent useless. It won't know your architecture, your conventions, your decisions, or your priorities — so it guesses.
+
+This skill builds the structural layer every agent-first project needs: a coherent set of governance documents that tell agents what the project is, how it's organized, what's been decided, and what's planned. One well-structured seed session means every future agent session starts with context instead of confusion.
 
 Primary outcome:
 - a coherent and reusable project structure
-- canonical governance documents
+- canonical governance documents (AGENTS, BACKLOG, PLANS, ARCHITECTURE, ADR)
 - explicit decision and planning scaffolding
 - evaluation-ready assets for iterative improvement
 - optional intake pattern for classifying raw requests before execution
+
+**The cardinal rule:** Never run seed on a repo that has existing files or unknown state — run `ai-project-scan` first. Seeding over existing files destroys context.
 
 This skill never develops application code.
 It creates and evolves architecture/governance assets only.
@@ -182,6 +194,12 @@ Execution is complete only if:
 - intent and impact checks are explicit
 - validation checks are documented
 - follow-ups are tracked (no hidden TODOs)
+
+## Anti-patterns
+- **Running seed on a non-empty repo without scanning first** — always run `ai-project-scan` on any repo with existing files before bootstrapping.
+- **Overwriting existing architecture files without reading them** — seed should read and migrate, not blindly replace.
+- **Creating governance files alongside application code** — seed creates architecture assets only; never touch app code.
+- **Installing intake as a heavy parallel process** — intake should be lightweight and integrated with existing backlog/plans, not a second governance system.
 
 ## Quick Invocation
 /ai-project-seed target=my-project context=agent-first template bootstrap
